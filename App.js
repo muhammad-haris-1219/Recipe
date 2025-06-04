@@ -43,11 +43,7 @@ const recipeURL = fetch('./recipes.json')
             });
         };
 
-        // if (screen.width < 768) {
-        //     titled.parentElement.style.display = "none"
-        //  sectioned.style.display = "none"
-        // }
-        searchValue.addEventListener('input', () => {
+            searchValue.addEventListener('input', () => {
             const searchRecipe = recipeData.filter((recipe) => {
                 return recipe.title.toUpperCase().indexOf(searchValue.value.toUpperCase()) > -1
                     || recipe.ingredients.join('').toUpperCase().indexOf(searchValue.value.toUpperCase()) > -1;
